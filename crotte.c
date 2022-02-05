@@ -6,16 +6,33 @@
 /*   By: mgusakov <mgusakov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 01:38:04 by mgusakov          #+#    #+#             */
-/*   Updated: 2022/02/05 04:26:33 by mgusakov         ###   ########.fr       */
+/*   Updated: 2022/02/05 05:01:33 by mgusakov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mlx.h"
-#include <stdio.h>
+#include "solong.h"
 
 int	dakey(int key, void *param)
 {
-	printf("%d\n", key);
+	switch (key)
+	{
+		case W:
+			printf("W\n");
+			break;
+		case A:
+			printf("A\n");
+			break;
+		case S:
+			printf("S\n");
+			break;
+		case D:
+			printf("D\n");
+			break;
+		case ESC:
+			exit(1);
+		default:
+			printf("key : %d\n", key);
+	}
 	return (0);
 }
 
